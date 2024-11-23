@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-ruby '3.2.3'
-gem 'pg'
+ruby "3.2.3"
+gem "pg"
 gem "rails", "~> 8.0.0"
 gem "propshaft"
 gem "puma", ">= 5.0"
@@ -30,8 +30,4 @@ end
 group :test do
   gem "capybara"
   gem "selenium-webdriver"
-end
-
-group :production do
-  gem 'pg'
 end
