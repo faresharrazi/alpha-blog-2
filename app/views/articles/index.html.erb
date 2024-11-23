@@ -1,5 +1,26 @@
 <h1>All Articles are here</h1>
-<% @articles.each do |article| %>
-    <p><strong>TITLE:</strong> <%= article.title %></p>
-    <p><strong>DESCRIPTION:</strong> <%= article.description %></p><br/>
-<% end %>
+<table>
+  <caption>
+    List of all articles
+  </caption>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @articles.each do |article| %>
+        <tr>
+        <td><%= article.title %></td>
+        <td><%= article.description %></td>
+        <td>Show</td>
+        <td>Edit</td>
+        <td>Delete</td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
