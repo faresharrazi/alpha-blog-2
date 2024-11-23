@@ -1,5 +1,13 @@
 <h1>Create a new article</h1>
 
+<% if @article.errors.any? %>
+    <h3>These errors are prevent you from saving the article: </h3>
+    <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+<% end %>
+
 <%= form_with model: @article, data: {turbo: false} do |f| %>
     <div>
         <%= f.label :title %>
