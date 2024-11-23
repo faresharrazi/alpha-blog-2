@@ -1,0 +1,17 @@
+<h1>Create a new article</h1>
+
+<%= form_with model: @article, data: {turbo: false} do |f| %>
+    <div>
+        <%= f.label :title %>
+    </div>
+    <div>
+        <%= f.text_field :title %>
+    </div>
+    <div>
+        <%= f.label :description %>
+    </div>
+    <div>
+        <%= f.text_area :description %>
+    </div>
+    <%= f.submit %>
+<% end %>
