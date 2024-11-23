@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 ruby '3.2.3'
-gem "sqlite3", ">= 2.1"
+gem 'pg'
 gem "rails", "~> 8.0.0"
 gem "propshaft"
 gem "puma", ">= 5.0"
